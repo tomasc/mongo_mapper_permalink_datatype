@@ -1,1 +1,1 @@
-require File.join(File.dirname(__FILE__), 'lib', 'mongo_mapper', 'datatypes', 'permalink_datatype.rb')
+require File.join(File.dirname(__FILE__), 'lib', 'mongo_mapper', 'datatypes', 'permalink')
