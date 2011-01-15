@@ -8,6 +8,11 @@ class PermalinkDatatypeTest < ActiveSupport::TestCase
 			assert_equal Permalink.to_mongo("Some Page Name"), "SomePageName"
 			assert_equal Permalink.to_mongo("     Some        Page      Name   "), "SomePageName"
 		end
+		
+		should "keep underscores" do
+		  assert_equal Permalink.to_mongo("Some_Page_Name"), "Some_Page_Name"
+		  assert_equal Permalink.to_mongo("Some_page_name"), "Some_page_name"
+	  end
 
 		should "capitalize string" do
 			assert_equal Permalink.to_mongo("poo"), "Poo"
